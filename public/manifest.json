@@ -1,7 +1,7 @@
 {
-  "short_name": "Chrome extension boilerplate.",
-  "name": "Chrome extension React boilerplate",
-  "description": "Simple Chrome extension React boilerplate",
+  "short_name": "YT-Resume",
+  "name": "TranscriptYT",
+  "description": "Youtube Resume Extension for Chrome ",
   "version": "1.0",
   "manifest_version": 3,
   "action": {

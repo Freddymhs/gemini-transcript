@@ -1,3 +1,4 @@
+const Dotenv = require("dotenv-webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
@@ -23,15 +24,14 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
   plugins: [
+    new Dotenv({
+      systemvars: true,
+    }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
