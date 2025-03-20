@@ -22,11 +22,7 @@ yarn build
 
 ## Pendientes
 
-A continuación, se presentan algunas tareas pendientes para el proyecto:
-
-- [ ] Agregar funcionalidad para insertar elementos.
-- [ ] Implementar la exportación como archivo JSON.
-- [ ] Agregar la capacidad de cargar datos desde un archivo JSON.
+- [ ]
 
 ## Prueba en Entorno Local
 
