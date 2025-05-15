@@ -1,37 +1,44 @@
-# Proyecto Original
+# YouTube Transcript
 
-[Enlace al repositorio en BestOfReactJS](https://bestofreactjs.com/repo/yafkari-chrome-extension-react-boilerplate)
+![MIT License](https://img.shields.io/badge/license-MIT-green)
 
-## Ejecutar en Local
+Aplicación web desarrollada con React que permite extraer la transcripción de un video de YouTube y generar un resumen automático usando inteligencia artificial.
 
-yarn add serve
+---
 
-Ejecución:
-`npm run serve`
-`npm run dev`
+## ✨ Características principales
 
-## Crear una versión de distribución (build) para Chrome y probar en entorno de desarrollo
+- ✅ **Transcripción automática** de videos de YouTube usando `youtube-transcript`.
+- 🔗 **Consulta optimizada** a una base de datos en Supabase a través de **Supadata.js**, evitando transcripciones repetidas.
+- 🧠 **Resumen generado con IA** usando un modelo Gemini (vía función `getGeminiAnswer`).
+- 📷 Vista previa en miniatura del video (thumbnail).
+- ✅ Validación automática del enlace de YouTube.
+- 🧪 Interfaz React con estilo moderno (`SCSS`) y compatibilidad Markdown (`react-markdown`).
 
-yarn build
+---
 
-## Uso
+## ⚙️ Cómo funciona
 
-- yarn dev: Inicia Webpack en modo de desarrollo.
-- yarn build: Ejecuta Webpack en modo de producción.
-- yarn lint: Comprueba problemas de estilo en archivos TypeScript en la carpeta src/.
+1. El usuario ingresa una URL de YouTube.
+2. La app valida la URL.
+3. Busca si ya existe una transcripción guardada en Supabase usando `getTranscriptionSupa()` (archivo `supadata.js`).
+4. Si existe, la utiliza directamente. Si no, la obtiene vía `youtube-transcript`.
+5. Envía la transcripción al modelo de Gemini para generar un resumen (`helpers/gemini.js`).
+6. Muestra el resumen en pantalla usando `react-markdown`.
 
-## Pendientes
+---
 
-- [ ]
+## 🚀 Scripts disponibles
 
-## Prueba en Entorno Local
+```bash
+# Instalar dependencias
+npm install
 
-Puedes probar el proyecto en tu entorno local utilizando los siguientes comandos:
+# Iniciar en modo desarrollo
+npm run dev
 
-
-npm run watch
-npx dev
-
-## probar el build
+# Compilar versión producción
 npm run build
-npx serve -s dist
+
+# Servir la app compilada
+npm run serve
